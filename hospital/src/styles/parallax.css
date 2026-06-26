@@ -1,0 +1,132 @@
+.parallax-section {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-background {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.parallax-background-inner {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  height: 120%;
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  z-index: -1;
+}
+
+.parallax-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.parallax-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform, opacity;
+  transition: transform 0.1s ease-out;
+  z-index: 0;
+}
+
+/* Parallax effects for specific sections */
+.hero-parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle at center, rgba(17, 153, 142, 0.05) 0%, transparent 70%);
+  animation: parallaxFloat 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes parallaxFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(5%, -5%) scale(1.1);
+  }
+  50% {
+    transform: translate(0, -10%) scale(1);
+  }
+  75% {
+    transform: translate(-5%, -5%) scale(1.1);
+  }
+}
+
+/* Parallax decorative elements */
+.parallax-decorator {
+  position: absolute;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.parallax-decorator-1 {
+  top: 10%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--brand-light), transparent);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.parallax-decorator-2 {
+  bottom: 20%;
+  left: 15%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, var(--accent), transparent);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+/* Disable parallax on mobile for performance */
+@media (max-width: 768px) {
+  .parallax-section,
+  .parallax-background-inner,
+  .parallax-hero-bg {
+    transform: none !important;
+  }
+
+  .hero-parallax::before {
+    animation: none;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-section,
+  .parallax-background-inner,
+  .parallax-hero-bg,
+  .parallax-decorator {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-parallax::before {
+    animation: none !important;
+  }
+}
+

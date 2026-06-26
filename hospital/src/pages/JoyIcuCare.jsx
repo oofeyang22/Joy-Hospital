@@ -1,0 +1,230 @@
+import { FadeIn, StaggerContainer } from '../components/AnimatedSection'
+import PhotoGallery from '../components/PhotoGallery'
+import {
+  Hospital,
+  Activity,
+  Users,
+  Workflow,
+  Clock,
+  Building2,
+  Stethoscope,
+  ShieldCheck,
+  Handshake
+} from 'lucide-react'
+import otIcuLogo from '../assets/icu_logo.png'
+import { JOY_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
+import otIcuImage1 from '../assets/icu.png?format=webp&w=800&quality=75'
+import otIcuImage2 from '../assets/icu2.png?format=webp&w=800&quality=75'
+import otIcuImage3 from '../assets/icu3.png?format=webp&w=800&quality=75'
+import otIcuImage4 from '../assets/icu4.png?format=webp&w=800&quality=75'
+import otIcuImage5 from '../assets/icu5.jpg?format=webp&w=800&quality=75'
+import otIcuImage6 from '../assets/icu6.png?format=webp&w=800&quality=75'
+import otIcuImage7 from '../assets/icu7.png?format=webp&w=800&quality=75'
+import otIcuImage8 from '../assets/icu8.png?format=webp&w=800&quality=75'
+import otIcuImage9 from '../assets/icu9.png?format=webp&w=800&quality=75'
+import otIcuImage10 from '../assets/icu10.png?format=webp&w=800&quality=75'
+import otIcuImage11 from '../assets/icu11.png?format=webp&w=800&quality=75'
+import otIcuImage12 from '../assets/icu12.png?format=webp&w=800&quality=75'
+import otIcuImage13 from '../assets/icu13.jpg?format=webp&w=800&quality=75'
+import otIcuImage14 from '../assets/icu14.png?format=webp&w=800&quality=75'
+
+
+export default function OTIcuCare() {
+  const whyChooseItems = [
+    { text: '24/7 Critical Care Availability', Icon: Clock },
+    { text: 'Modern Infrastructure', Icon: Building2 },
+    { text: 'Expert Surgical Team', Icon: Stethoscope },
+    { text: 'Safety First Protocol', Icon: ShieldCheck },
+    { text: 'Compassionate Patient Care', Icon: Handshake }
+  ]
+  
+  const specialities = [
+    'General Surgery', 'Cardiothoracic Surgery', 'Neuro Surgery', 
+    'Orthopedic Surgery', 'Emergency Trauma Care', 'Advanced Life Support', 
+    'Ventilator Care', 'Post-Operative Monitoring', 'Invasive Monitoring', 
+    'Pain Management', 'Critical Nursing Care'
+  ]
+  
+  const features = [
+    { title: 'Operating Theatre', Icon: Hospital },
+    { title: 'Intensive Care Unit', Icon: Activity },
+    { title: 'Expert Team', Icon: Users },
+    { title: 'Seamless Workflow', Icon: Workflow }
+  ]
+
+  const galleryImages = [
+    { src: otIcuImage1, alt: 'OT & ICU Facility 1', caption: 'Advanced OT & ICU Infrastructure' },
+    { src: otIcuImage2, alt: 'OT & ICU Facility 2', caption: 'Critical Care Setup' },
+    { src: otIcuImage3, alt: 'OT & ICU Facility 3', caption: 'Modern Operation Theatre' },
+    { src: otIcuImage4, alt: 'OT & ICU Facility 4', caption: 'Intensive Care Unit' },
+    { src: otIcuImage5, alt: 'OT & ICU Facility 5', caption: 'Patient Monitoring & Support' },
+    { src: otIcuImage6, alt: 'OT & ICU Facility 6', caption: 'Specialized ICU Care' },
+    { src: otIcuImage7, alt: 'OT & ICU Facility 7', caption: 'Advanced Surgical Environment' },
+    { src: otIcuImage8, alt: 'OT & ICU Facility 8', caption: 'Post-Operative Care Area' },
+    { src: otIcuImage9, alt: 'OT & ICU Facility 9', caption: 'Emergency & Critical Care Readiness' },
+    { src: otIcuImage10, alt: 'OT & ICU Facility 10', caption: 'State-of-the-Art Equipment' },
+    { src: otIcuImage11, alt: 'OT & ICU Facility 11', caption: 'Dedicated Critical Care Team Facilities' },
+    { src: otIcuImage12, alt: 'OT & ICU Facility 12', caption: 'Clean and Spacious Clinical Environment' },
+    { src: otIcuImage13, alt: 'OT & ICU Facility 13', caption: 'Comprehensive OT & ICU Services' },
+    { src: otIcuImage14, alt: 'OT & ICU Facility 14', caption: 'Integrated Surgical and ICU Care' }
+  ]
+
+  return (
+    <section className="section ot-icu-care-page">
+      <FadeIn>
+        <div className="ot-icu-hero">
+          <svg className="ot-icu-hero-svg" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0.039 399.875C332.539 425.875 362.539 -14.125 766.539 0.875L1440 0L0 0L0.039 399.875Z" fill="#62a6b8" />
+            <path d="M593 1023.98C730.074 1020.09 963.976 977.801 1059.5 852.5C1260 589.5 1497.18 691.875 1634 695.262L1440 695.262L1440 1024L593 1024Z" fill="#62a6b8" />
+          </svg>
+
+          <div className="ot-icu-hero-content">
+            <div className="ot-icu-hero-left">
+              <StaggerContainer className="ot-icu-hero-text-stagger">
+                <div className="ot-icu-hero-title-group">
+                  <div className="ot-icu-badge">Ikeja</div>
+                  <h1 className="ot-icu-title">
+                    <span className="ot-icu-title-dr">Joy Hospital</span>
+                    <span className="ot-icu-title-main">Operating Theatre & Intensive Care</span>
+                  </h1>
+                  <div className="ot-icu-divider"></div>
+                </div>
+                <div className="ot-icu-lead">
+                  <p className="ot-icu-subtitle">Excellence in Surgical Care and Critical Support.</p>
+                </div>
+                <div className="ot-icu-tagline" role="list" aria-label="Expert Care | Advanced Technology | Patient First">
+                    <span className="ot-icu-tagline-item">Expert Care | Advanced Technology | Patient First</span>
+                </div>
+                <div className="ot-icu-quote">
+                  <p>"Your life and well-being are our highest priorities."</p>
+                </div>
+              </StaggerContainer>
+            </div>
+            <div className="ot-icu-hero-logo">
+              <img src={otIcuLogo} alt="Joy Hospital — OT & ICU Care" width="320" height="120" loading="eager" decoding="async" className="ot-icu-hero-logo-img" />
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+
+      <div className="ot-icu-section">
+        <FadeIn>
+          <div className="ot-icu-why-choose">
+            <div className="why-choose-header">
+              <h2>Why Choose Our Care</h2>
+            </div>
+            <StaggerContainer as="ul" className="why-choose-cards" role="list">
+              {whyChooseItems.map((item, index) => {
+                const IconComponent = item.Icon
+                return (
+                  <li key={index} className="why-choose-card">
+                    <div className="why-choose-card-icon" aria-hidden="true">
+                      <IconComponent size={28} strokeWidth={1.5} />
+                    </div>
+                    <p className="why-choose-card-text">{item.text}</p>
+                  </li>
+                )
+              })}
+            </StaggerContainer>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="ot-icu-specialities">
+            <h2 className="specialities-title">Our Specialities</h2>
+            <StaggerContainer className="specialities-grid">
+              {specialities.map((speciality, index) => (
+                <div key={index} className="speciality-card">
+                  <span className="speciality-badge" aria-hidden="true">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="speciality-name">{speciality}</div>
+                </div>
+              ))}
+            </StaggerContainer>
+          </div>
+        </FadeIn>
+      </div>
+
+      <FadeIn>
+        <div className="ot-icu-main-cta">
+          <div className="main-cta-content">
+            <h2>Looking for Specialized Care?</h2>
+            <p className="main-cta-subtitle">Our team is here to provide dedicated support.</p>
+            <div className="main-cta-description">
+              <p>We provide comprehensive surgical and critical care services in a safe, monitored, and professional environment.</p>
+            </div>
+            <div className="features-grid">
+              {features.map((feature, index) => {
+                const IconComponent = feature.Icon
+                return (
+                  <div key={index} className="feature-card">
+                    <div className="feature-icon" aria-hidden="true">
+                      <IconComponent size={36} strokeWidth={1.5} />
+                    </div>
+                    <h3>{feature.title}</h3>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="main-cta-footer">
+              <p>Contact our facility to learn more about our patient care services.</p>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+
+      <PhotoGallery images={galleryImages} title="Facility Photo Gallery" previewCount={8} />
+
+      <FadeIn>
+        <div className="ot-icu-contact">
+          <div className="contact-content">
+            <h2>
+              <span className="contact-title-line">Contact Us</span>
+              <span className="contact-division-line">Allen Avenue, Ikeja</span>
+            </h2>
+            <div className="contact-info-grid">
+              <a href={JOY_OT_ICU_GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="contact-card-modern contact-card-interactive" title="Open in Google Maps">
+                <div className="contact-card-icon-button">
+                  <div className="icon-button-circle">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div className="icon-button-glow" />
+                </div>
+                <h3 className="contact-card-title">Our Location</h3>
+                <div className="contact-card-content">
+                  <p>Ikeja, Lagos</p>
+                </div>
+                <div className="contact-card-action">
+                  <span>View on Maps</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="tel:+23490658789" className="contact-card-modern contact-card-interactive">
+                <div className="contact-card-icon-button">
+                  <div className="icon-button-circle">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <div className="icon-button-glow" />
+                </div>
+                <h3 className="contact-card-title">Emergency Contact</h3>
+                <div className="contact-card-content">
+                  <p className="contact-highlight-text">+234 810 7726 872</p>
+                  <p className="contact-note-text">Available 24/7 for emergencies</p>
+                </div>
+                <div className="contact-card-action">
+                  <span>Call Now</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+    </section>
+  )
+}
